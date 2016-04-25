@@ -10,6 +10,8 @@ class Recipe < ActiveRecord::Base
 			minutes_to_cook
 	end
 end
-end
+
 
 validates :name, presence: true, length: { minimum: 2} #validations are key
+mount_uploader :picture, PictureUploader
+end
